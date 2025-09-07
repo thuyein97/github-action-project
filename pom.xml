@@ -41,6 +41,11 @@ http://www.w3.org/2001/XMLSchema-instance"
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
 		<dependency>
+    		<groupId>org.codehaus.plexus</groupId>
+    		<artifactId>plexus-utils</artifactId>
+    		<version>3.0.24</version> <!-- patched version -->
+		</dependency>
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>

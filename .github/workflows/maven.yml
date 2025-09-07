@@ -39,7 +39,6 @@ jobs:
         scan-ref: .
         exit-code: 1
         severity: 'CRITICAL,HIGH'
-        skip-version-check: true
     - name: Upload Vulnerability Scan Results
       uses: actions/upload-artifact@v4
       if: always()
