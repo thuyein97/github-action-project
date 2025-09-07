@@ -56,13 +56,6 @@ http://www.w3.org/2001/XMLSchema-instance"
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
-			<exclusions>
-        	<!-- Exclude Maven Core from being packaged -->
-        		<exclusion>
-          			<groupId>org.apache.maven</groupId>
-          			<artifactId>maven-core</artifactId>
-        		</exclusion>
-      		</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>org.thymeleaf.extras</groupId>
@@ -90,6 +83,11 @@ http://www.w3.org/2001/XMLSchema-instance"
 			<artifactId>spring-security-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+      		<groupId>org.apache.maven</groupId>
+      		<artifactId>maven-core</artifactId>
+      		<version>3.8.1</version>
+    	</dependency>
 	</dependencies>
 
 	<build>
