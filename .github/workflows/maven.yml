@@ -106,9 +106,18 @@ jobs:
       uses: docker/build-push-action@v6
       with:
         push: true
-        tags: thuyein97/bankapp:latest
+        tags: ${{ vars.DOCKERHUB_USERNAME }}/${{ vars.IMAGE_NAME }}:latest
         context: .
         file: ./Dockerfile
+    - name: Run Trivy vulnerability scan
+      uses: aquasecurity/trivy-action@master
+      with:
+        image-ref: '${{ vars.DOCKERHUB_USERNAME }}/${{ vars.IMAGE_NAME }}:latest'
+        format: 'table'
+        exit-code: '1'
+        ignore-unfixed: true
+        vuln-type: 'os,library'
+        severity: 'CRITICAL,HIGH'
       
       
 
