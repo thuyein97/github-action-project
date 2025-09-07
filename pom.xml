@@ -58,7 +58,7 @@ http://www.w3.org/2001/XMLSchema-instance"
 		</dependency>
 
 		<dependency>
-			<groupId>mysql</groupId>
+			<groupId>com.mysql</groupId>
 			<artifactId>mysql-connector-j</artifactId>
 			<version>8.2.0</version>
 			<scope>runtime</scope>
