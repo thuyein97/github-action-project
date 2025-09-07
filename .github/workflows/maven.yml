@@ -63,7 +63,7 @@ jobs:
         # Disabling shallow clones is recommended for improving the relevancy of reporting
         fetch-depth: 0
     - name: build the code
-      run: mvn package
+      run: mvn clean package
     - name: SonarQube Scan
       uses: SonarSource/sonarqube-scan-action@v5.3.1
       env:
